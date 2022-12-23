@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "bracket-pair-colorizer-2",
+        "indent-rainbow",
+        "five-server",
+        "zenkaku",
+        "tabnine-vscode"
+    ]
+}

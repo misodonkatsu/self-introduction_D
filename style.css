@@ -118,6 +118,7 @@ header {
 }
 
 .heading h2 {
+    text-align: center;
     font-weight: bold;
     color: #4B52A7;
 }
@@ -232,6 +233,15 @@ header {
     color: #FFE8F6;
 }
 
+.border {
+    font-size: 16px;
+    text-align: center;
+    color: #32839C;
+    padding-top: 80px;
+
+    padding-bottom: 3px;
+    border-bottom: 1px solid #B7B7B7;
+}
 .sample {
     width: 25%;
 }
