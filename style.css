@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP';
+    height: 100vh;
+    letter-spacing: 0.05em;
+}
+
+body, h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1024px;
+    max-width: 90%;
+    margin: 80px auto 0 auto;
+}
+
+header {
+    padding: 0 20px;
+    height: 80px;
+    width: 100%;
+    background-color: #000000CB;
+    position: fixed;
+    z-index: 10;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header {
+        height: 48px;
+    }
+}
+
+.header-left {
+    float: left;
+}
+
+.header-left span {
+    color: #A6ACFF;
+}
+
+.header-logo {
+    line-height: 79px;
+    font-size: 26px;
+    margin: 0 auto;
+    color: white;
+
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        font-size: 20px;
+        line-height: 48px;
+        /* 折り返さない */
+        white-space: nowrap;
+    }
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right li {
+    float: left;
+    list-style-type: none;
+}
+
+.header-right a {
+    color: white;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+.header-right li:not(:last-child) {
+    padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .header-right {
+        display: none;
+    }
+}
+
+/* ヘッダ:aタグ押下時、ページ内遷移。スクロール位置調整 */
+.anchor {
+    margin-top: -80px;
+}
+#anchor-self, #anchor-sample {
+    padding-top: 80px;
+}
+
+.clear {
+    clear: left;
+}
+
+.main-view {
+    background-image: url(./images/main.jpg);
+    background-size: 132% 200%;
+    background-position: right 25% top 40%;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+
+@media (max-width: 768px) {
+    .main-view {
+        background-image: url(./images/main_sp.jpg);
+        background-size: 288% 141%;
+        background-position: right 39% center;
+        height: 100vh;
+    }
+}
+
+.heading h2 {
+    font-weight: bold;
+    color: #4B52A7;
+}
+
+.heading-title {
+    font-size: 24px;
+    padding-bottom: 6px;
+}
+
+.heading-sub {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .heading-title {
+        font-size: 20px;
+        padding-bottom: 4px;
+    }
+    .heading-sub {
+        font-size: 12px;
+    }
+}
+
+.main-self {
+    text-align: center;
+}
+
+.main-self img {
+    width: 610px;
+    /* 画像下の余白を消す */
+    vertical-align: bottom;
+    margin-bottom: 40px;
+}
+
+.main-self span {
+    font-weight: bold;
+}
+
+.main-self p {
+    line-height: 2.0;
+    display: inline-block;
+    text-align: left;
+    width: 610px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .main-self p {
+        width: 100%;
+        font-size: 14px;
+        padding-bottom: 25px;
+    }
+    .main-self img {
+        width: 100%;
+    }
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-fav, .main-sites {
+    height: 204px;
+    width: 48%;
+    background-color: #8AB3DC;
+    border-radius: 10px;
+}
+
+.main-title, .main-sub-border {
+    color: white;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 16px;
+    padding-top: 16px;
+}
+
+.main-sub-border {
+    font-size: 12px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid white;
+}
+
+.sample {
+    width: 25%;
+}
+
+footer {
+    height: 120px
+}
