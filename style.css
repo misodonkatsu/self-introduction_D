@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Noto Sans JP';
+    font-family: 'Noto Sans JP', 'sans-serif';
     height: 100vh;
     letter-spacing: 0.05em;
 }
@@ -201,7 +201,35 @@ header {
 .main-sub-border {
     font-size: 12px;
     padding-bottom: 11px;
+    /* ボーダーの幅を調整 */
     border-bottom: 1px solid white;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-flex ul {
+    height: 134px;
+    margin: auto;
+    padding: 1em 2em;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.main-flex li {
+    list-style: none;
+    font-weight: bold;
+}
+
+.main-fav li {
+    color: #FEFFC7;
+}
+
+.main-sites li {
+    color: #FFE8F6;
 }
 
 .sample {
