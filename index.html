@@ -67,7 +67,7 @@
                 <h2 class="heading-title">実装サンプル</h2>
                 <h2 class="heading-sub">Sample</h2>
             </div>
-            <h3 class="border">画像ギャラリー</h3>
+            <h3 class="border sample-border">画像ギャラリー</h3>
             <div class="samples">
                 <div class="sample">
                     <img src="images/gallery01.jpg">
@@ -96,35 +96,39 @@
     <div class="form-wrapper">
         <div class="container">
             <h3 class="border">お問い合わせフォーム</h3>
-            <form action="" method="post">
-                <img class="form-icon-required" src=""><label for="form-name">名前</label>
-                <input id="form-name" type="text" required>
-
-                <img class="form-icon-required" src=""><label for="form-email">メールアドレス</label>
-                <input id="form-email" type="email" required>
-
-                <img class="form-icon-required" src=""><label for="form-age">年齢</label>
-                <input id="form-age" type="number" required>
-
-                <img class="form-icon-required" src=""><label for="form-inquiry">お問い合わせ内容</label>
-                <textarea id="form-inquiry" required></textarea>
-
-                <span class="btn"><input class="form-submit" type="submit" value="送信"></span>
+            <form action="" method="post" class="form">
+                <div class="form-group">
+                    <div class="form-icon-required">必須</div><label for="form-name">名前</label>
+                    <input id="form-name" type="text" required>
+                </div>
+                <div class="form-group">
+                    <div class="form-icon-required">必須</div><label for="form-email">メールアドレス</label>
+                    <input id="form-email" type="email" required>
+                </div>
+                <div class="form-group">
+                    <div class="form-icon-required">必須</div><label for="form-age">年齢</label>
+                    <input id="form-age" type="number" min="0" required>
+                </div>
+                <div class="form-group">
+                    <div class="form-icon-required">必須</div><label for="form-inquiry">お問い合わせ内容</label>
+                    <textarea id="form-inquiry" required></textarea>
+                </div>
+                <input class="form-submit btn" type="submit" value="送信">
             </form>
         </div>
     </div>
 
     <div class="assignment-wrapper">
         <div class="container">
-            <h3 class="border">JavaScript課題</h3>
-            <span class="btn">実行！</span>
+            <div class="assignment">
+                <h3 class="border">JavaScript課題</h3>
+                <span class="btn" id="assignment-btn">実行！</span>
+            </div>
         </div>
     </div>
 
     <footer>
-        <div class="container">
             <p>Copyright © 2022 Taro Shuro</p>
-        </div>
     </footer>
 </body>
 </html>
