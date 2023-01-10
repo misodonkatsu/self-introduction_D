@@ -59,7 +59,6 @@ header {
     .header-logo {
         font-size: 20px;
         line-height: 2.5;
-        /* 折り返さない */
         white-space: nowrap;
     }
 }
@@ -89,7 +88,6 @@ header {
     }
 }
 
-/* ヘッダ:aタグ押下時、ページ内遷移。スクロール位置調整 */
 .anchor {
     margin-top: -80px;
 }
@@ -150,7 +148,6 @@ header {
 .main-self img {
     width: 610px;
     margin-bottom: 40px;
-    /* 画像下の余白を消す */
     vertical-align: bottom;
 }
 
@@ -350,10 +347,6 @@ header {
 .form-icon-required:hover {
     cursor: default;
 }
-
-/* .form-group :not(:first-child) {
-    margin-top: 20px;
-} */
 
 .form-group input, .form-group textarea {
     margin-top: 10px;
