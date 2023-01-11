@@ -130,5 +130,75 @@
     <footer>
             <p>Copyright © 2022 Taro Shuro</p>
     </footer>
+    <script type="text/javascript">
+
+        const members = [
+            {
+                name: '佐藤',
+                age: 9
+            },
+            {
+                name: '杉本',
+                age: 16
+            },
+            {
+                name: '山田',
+                age: 20
+            },
+            {
+                name: '川西',
+                age: 30
+            }
+        ];
+
+        const getYearsLeftUntilTwenty = (currentAge) => {
+            if (Number.isNaN(currentAge)) {
+                return;
+            }
+            return 20 - currentAge;
+        };
+
+        const numbers = [29342, 45342, 23419283, 148458552];
+
+        const isEven= (number) => {
+            if (Number.isNaN(number)) {
+                return;
+            }
+            return number % 2 === 0;
+        }
+
+        const getRemainder = (numA, numB) => {
+            if (Number.isNaN(numA || numB)) {
+                return;
+            }
+            return numA % numB;
+        };
+
+        window.onload = function() {
+            const clickEvent = () => {
+                for (const member of members) {
+                    if (member.age >= 20) {
+                        console.log(`${member.name}さんの年齢は${member.age}歳です。20歳を超えています。`)
+                    } else {
+                        const years = getYearsLeftUntilTwenty(member.age);
+                        console.log(`${member.name}さんの年齢は${member.age}歳です。20歳まで${years}年です。`);
+                    }
+                }
+
+                let i = 0;
+                while (i < numbers.length) {
+                    const result = getRemainder(numbers[i], 7);
+                    if (isEven(numbers[i])) {
+                        console.log(`${numbers[i]}は偶数です。7で割ったあまりは${result}です。`);
+                    } else {
+                        console.log(`${numbers[i]}は奇数です。7で割ったあまりは${result}です。`);
+                    }
+                    i++;
+                }
+            };
+            let assignmentButton = document.getElementById('assignment-btn');
+            assignmentButton.addEventListener('click', clickEvent);
+        }
+    </script>
 </body>
 </html>
