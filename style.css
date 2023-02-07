@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', 'sans-serif';
+    font-family: 'Noto Sans JP', sans-serif;
     height: 100vh;
     letter-spacing: 0.05em;
     min-width: 375px;
@@ -34,7 +34,7 @@ header {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-    header {
+    header, .header-left, h1 {
         height: 48px;
     }
 }
@@ -45,6 +45,16 @@ header {
 
 .header-left span {
     color: #A6ACFF;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .header-logo {
@@ -95,10 +105,6 @@ header {
     padding-top: 80px;
 }
 
-.clear {
-    clear: left;
-}
-
 .main-view {
     background-image: url(./images/main.jpg);
     background-size: 132% 200%;
@@ -124,7 +130,7 @@ header {
 
 .heading-title {
     font-size: 24px;
-    padding-bottom: 6px;
+    line-height: 1.15;
 }
 
 .heading-sub {
@@ -146,7 +152,7 @@ header {
 }
 
 .main-self img {
-    width: 610px;
+    width: 600px;
     margin-bottom: 40px;
     vertical-align: bottom;
 }
@@ -159,7 +165,7 @@ header {
     line-height: 2.0;
     display: inline-block;
     text-align: left;
-    width: 610px;
+    width: 600px;
     padding-top: 40px;
     padding-bottom: 30px;
 }
@@ -206,7 +212,7 @@ header {
 
 .main-title {
     font-size: 16px;
-    padding-top: 16px;
+    padding-top: 20px;
 }
 
 .main-sub-border {
@@ -221,7 +227,7 @@ header {
 .main-flex ul {
     height: 134px;
     margin: auto;
-    padding: 1em 2em;
+    padding: 20px 10px;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
@@ -230,13 +236,14 @@ header {
 .main-flex li {
     list-style: none;
     font-weight: bold;
+    height: 30px;
 }
 
 .main-fav li {
     color: #FEFFC7;
 }
 
-.main-sites li {
+.main-sites a {
     color: #FFE8F6;
 }
 
@@ -257,28 +264,19 @@ header {
     justify-content: space-around;
 }
 
-@media (min-width: 768px) {
-    .samples {
-        padding-left: 30px;
-    }
-}
-
-.samples img {
-    width: 90%;
-    vertical-align: bottom;
-}
-
 @media (max-width: 768px) {
     .samples {
         flex-direction: column;
-    }
-    .samples img {
-        width: 80%;
     }
 }
 
 .sample {
     width: 25%;
+}
+
+.sample img {
+    width: 90%;
+    display: block;
 }
 
 .sample h4 {
@@ -297,15 +295,20 @@ header {
     padding-top: 4px;
 }
 
+.sample img, .sample h4, .sample p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 768px) {
     .sample {
-        margin-left: auto;
-    }
-    .sample, .sample h4, .sample p {
-        width: 80%;
+        width: 100%;
     }
     .sample:not(:last-child) {
         margin-bottom: 20px;
+    }
+    .sample img, .sample h4, .sample p {
+        width: 80%;
     }
 }
 
@@ -321,7 +324,7 @@ header {
 
 @media (max-width: 768px) {
     .form {
-        max-width: 90%;
+        width: 100%;
     }
 }
 
@@ -333,7 +336,6 @@ header {
 
 .form-icon-required {
     display: inline-block;
-    width: 40px;
     font-size: 12px;
     font-weight: bold;
     color: white;
@@ -342,6 +344,8 @@ header {
     text-align: center;
     line-height: 2;
     margin-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .form-icon-required:hover {
@@ -366,6 +370,7 @@ header {
 
 .form-submit {
     margin-top: 40px;
+    margin-bottom: 80px;
 }
 
 .btn {
@@ -387,16 +392,17 @@ header {
 	box-shadow: none;
 }
 
-.assignment-wrapper {
-    height: 187px;
-}
-
 .assignment {
     text-align: center;
 }
 
+.assignment-wrapper  > .container {
+    margin-top: 0px;
+}
+
 #assignment-btn {
     margin-top: 40px;
+    margin-bottom: 80px;
     display: inline-block;
     line-height: 2.5;
 }
